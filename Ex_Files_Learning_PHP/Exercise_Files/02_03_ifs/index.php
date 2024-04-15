@@ -18,3 +18,11 @@ if ( 11 == $i ) {
 } else {
     echo '<h3>Welcome to the site!</h3>';
 }
+
+$is_logged_in = false;
+
+if ( $is_logged_in ) {
+    echo '<h3>Welcome back, user!</h3>';
+} else {
+    echo '<h3>Welcome to the site!</h3>';
+}

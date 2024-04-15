@@ -1,22 +1,30 @@
-<?php 
-function add_to_x($x) {
-    return $x + 5;
+<?php
+$turtle = 'Leo';
+$bandana = '';
+switch( $turtle ) {
+    case 'Leo':
+        $bandana = 'blue';
+        break;
+    case 'Raph':
+        $bandana = 'red';
+        break;
+    case 'Mike':
+        $bandana = 'orange';
+        break;
+    case 'Don':
+        $bandana = 'purple';
+        break;
 }
 
-$x = 0;
+echo "<p>$bandana</p>";
 
-$result = match($x) {
-    -2, -1, 0 => add_to_x($x),
-    1 => '$x is 1',
-    2 => '$x is 2',
-    default => '$x is neither 1 nor 2',
-};
+// $turtle = 'Don';
+// $bandana = match($turtle) {
+//     'Leo' => 'blue',
+//     'Raph' => 'red',
+//     'Mikey' => 'orange',
+//     'Don' => 'purple',
+//     default => 'red',
+// };
 
-$result = match(true) {
-    $x <= 0 => '$x in not positive',
-    $x == 1 => '$x is 1',
-    $x == 2 => '$x is 2',
-    default => '$x is neither 1 nor 2',
-}
-
-echo $result;
+echo $bandana;
